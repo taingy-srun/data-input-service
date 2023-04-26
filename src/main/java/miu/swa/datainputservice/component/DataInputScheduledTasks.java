@@ -17,7 +17,7 @@ public class DataInputScheduledTasks {
 
     @Autowired
     DataInputService service;
-    @Value("${kafka.topics.dis}")
+    @Value("${kafka.topics.dis-output-topic}")
     private String SERVICE_TOPIC_X;
     @Value("${app.properties.upper-bound}")
     private long UPPER_BOUND;
