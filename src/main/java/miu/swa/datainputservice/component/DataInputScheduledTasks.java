@@ -27,7 +27,7 @@ public class DataInputScheduledTasks {
         return rand.nextLong(upperBound);
     }
 
-    @Scheduled(fixedRateString = "${scheduled.fixed-rate.in.milliseconds}")
+    @Scheduled(fixedRateString = "${scheduled.fixed-rate-milliseconds}")
     public void sendData() {
         if (service.isEnabled()) {
             sender.send(SERVICE_TOPIC_X, getRandomNumber(UPPER_BOUND));
